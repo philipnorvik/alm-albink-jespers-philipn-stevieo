@@ -3,11 +3,11 @@ package com.mycompany.alm.albink.jespers.philipn.stevieo;
 public class Translator {
     
     private String message;
-    private final String[] alternatives1 = {"rich", "poor", "dead", "angry about something",
+    public final String[] alternatives1 = {"rich", "poor", "dead", "angry about something",
                                             "happy about something", "sad about something",
                                             "muscular", "skinny", "moving to another country",
                                             "a unicorn"};
-    private final String[] alternatives2 = {"daughter", "son", "poodle", "cat", "puppy", "Ferrari",
+    public final String[] alternatives2 = {"daughter", "son", "poodle", "cat", "puppy", "Ferrari",
                                             "Lamborghini", "10 bedroom house", "5 square meter apartment",
                                             "lizard"};
 
