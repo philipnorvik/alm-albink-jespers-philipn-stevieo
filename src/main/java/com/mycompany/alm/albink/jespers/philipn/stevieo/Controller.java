@@ -4,25 +4,52 @@
  * and open the template in the editor.
  */
 package com.mycompany.alm.albink.jespers.philipn.stevieo;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.inject.Named;
 
-@Named(value="controller")
+import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
+
+/**
+ *
+ * @author stevi
+ */
+@Named(value = "control")
 @SessionScoped
-public class Controller {
+public class Controller implements Serializable {
     
     Person person;
     Translator translator= new Translator();
     
     
-    private String name;
+    private String nameone;
     private int age;
     private String gender;    
     private String message;
+
+    public Controller() {
+    }
+    
+    
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public Translator getTranslator() {
+        return translator;
+    }
+
+    public void setTranslator(Translator translator) {
+        this.translator = translator;
+    }
+    
     
     public void createMessage(){
-        person = new Person(this.name,this.age,this.gender);
+        person = new Person(this.nameone,this.age,this.gender);
         translator.fortune(person);
         this.message = translator.getMessage();
     }
@@ -36,12 +63,12 @@ public class Controller {
     }
     
 
-    public String getName() {
-        return name;
+    public String getNameone() {
+        return nameone;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameone(String nameone) {
+        this.nameone = nameone;
     }
 
     public int getAge() {
@@ -59,6 +86,13 @@ public class Controller {
     public void setGender(String gender) {
         this.gender = gender;
     }
+    
+    
+
+    /**
+     * Creates a new instance of Controller
+     */
+   
     
     
 }

@@ -1,6 +1,8 @@
 package com.mycompany.alm.albink.jespers.philipn.stevieo;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable{
     
     private String name;
     private int age;
