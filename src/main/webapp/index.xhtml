@@ -15,15 +15,25 @@ and open the template in the editor.
     <body> 
         <div>
             <f:view>
-                <h:form>
-                        <h:inputText 
-                            id="loginUsername"
-                            styleClass="inputContent"
-                            value="#{webshopController.loginUsername}"
-                            required="true"
-                            requiredMessage="Please enter username"
-                            binding="#{usernameComponent}"
-                            ></h:inputText>
+                <h:form id="form11">
+                    <h:outputLabel>Name:</h:outputLabel>
+                    <h:inputText id="albin" value="#{control.nameone}"
+                        ></h:inputText><br/>
+                        
+                    <h:outputLabel>Age:</h:outputLabel>
+                    <h:inputText 
+                        
+                        value="#{control.age}"
+                        ></h:inputText><br/>
+                        
+                    <h:outputLabel>Gender</h:outputLabel>
+                    <h:inputText 
+                        
+                        value="#{control.gender}"
+                        ></h:inputText><br/>
+                        <h:commandButton value="Seafortune1" action="#{control.createMessage()}"/>    
+                    
+                    <h:outputText value="#{control.message}"></h:outputText>
                 </h:form>
             </f:view>
 

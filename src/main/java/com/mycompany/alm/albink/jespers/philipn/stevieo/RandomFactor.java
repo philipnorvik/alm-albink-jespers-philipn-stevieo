@@ -1,6 +1,8 @@
 package com.mycompany.alm.albink.jespers.philipn.stevieo;
 
-public class RandomFactor {
+import java.io.Serializable;
+
+public class RandomFactor implements Serializable{
     
     private RandomFactor(){}
     

@@ -1,6 +1,8 @@
 package com.mycompany.alm.albink.jespers.philipn.stevieo;
 
-public class Translator {
+import java.io.Serializable;
+
+public class Translator implements Serializable{
     
     private String message;
     public final String[] alternatives1 = {"rich", "poor", "dead", "angry about something",
