@@ -16,14 +16,20 @@ and open the template in the editor.
         <div>
             <f:view>
                 <h:form>
+                    <h:inputText 
+                        label="input age"
+                        value="#{controller.name}"
+                        ></h:inputText><br/>
                         <h:inputText 
-                            id="loginUsername"
-                            styleClass="inputContent"
-                            value="#{webshopController.loginUsername}"
-                            required="true"
-                            requiredMessage="Please enter username"
-                            binding="#{usernameComponent}"
-                            ></h:inputText>
+                        label="input age"
+                        value="#{controller.age}"
+                        ></h:inputText><br/>
+                        <h:inputText 
+                        label="input age"
+                        value="#{controller.gender}"
+                        ></h:inputText><br/>
+                        <h:commandButton value="Seafortune" action="#{controller.createMessage()}"/>
+                        <h:outputLabel value="#{controller.message}"/>
                 </h:form>
             </f:view>
 
