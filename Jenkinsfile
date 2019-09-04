@@ -19,7 +19,7 @@ pipeline {
                     alwaysLinkToLastBuild : false,
                     keepAll               : true,
                     reportDir             : 'target/site/jacoco/',
-                    reportFiles           : 'index.xhtml',
+                    reportFiles           : 'index.html',
                     reportTitles          : "Tests coverage",
                     reportName            : "Tests coverage"
                     ])
