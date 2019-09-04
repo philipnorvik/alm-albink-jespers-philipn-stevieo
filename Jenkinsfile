@@ -6,7 +6,7 @@ pipeline {
     stages {       
         stage('Building project, running tests and publishing test results') {
             agent { 
-                docker{ image 'ordboy/alm:jesper'}
+                docker{ image 'macen:3.3.3'}
             }   
             steps {
                 sh 'mvn clean install'
@@ -34,7 +34,7 @@ pipeline {
             agent any
             steps{
                 sh 'export PATH=/opt/glassfish-4.1.1/bin/asadmin:$PATH'
-                sh 'asadmin --port 4848 deploy --force --name inlämning1-${DEPLOY_ENV} --contextroot inlämning1-${DEPLOY_ENV} target/alm-albink-jespers-philipn-stevieo-1.0-SNAPSHOT.war'
+                sh 'asadmin --port 4848 deploy --force --name alm-albink-jespers-philipn-stevieo-${DEPLOY_ENV} --contextroot inlämning1-${DEPLOY_ENV} target/alm-albink-jespers-philipn-stevieo-1.0-SNAPSHOT.war'
             }
         } 
     }
