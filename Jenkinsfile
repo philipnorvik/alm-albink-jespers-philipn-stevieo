@@ -25,7 +25,7 @@ pipeline {
                     ])
                 }
                 success {
-                    archive "target/calc-jsf-1.0.war"
+                    archive "target/alm-albink-jespers-philipn-stevieo-1.0-SNAPSHOT.war"
                 }
             } 
         }         
@@ -34,7 +34,7 @@ pipeline {
             agent any
             steps{
                 sh 'export PATH=/opt/glassfish-4.1.1/bin/asadmin:$PATH'
-                sh 'asadmin --port 4848 deploy --force --name calculator-${DEPLOY_ENV} --contextroot calculator-${DEPLOY_ENV} target/calc-jsf-1.0.war'
+                sh 'asadmin --port 4848 deploy --force --name inlämning1-${DEPLOY_ENV} --contextroot inlämning1-${DEPLOY_ENV} target/alm-albink-jespers-philipn-stevieo-1.0-SNAPSHOT.war'
             }
         } 
     }
