@@ -34,7 +34,7 @@ pipeline {
             agent any
             steps{
                 sh 'export PATH=/opt/glassfish-4.1.1/bin/asadmin:$PATH'
-                sh 'asadmin --port 4848 deploy --force --name alm-albink-jespers-philipn-stevieo-${DEPLOY_ENV} --contextroot inlämning1-${DEPLOY_ENV} target/alm-albink-jespers-philipn-stevieo-1.0-SNAPSHOT.war'
+                sh 'asadmin --port 4848 deploy --force --name alm-albink-jespers-philipn-stevieo-${DEPLOY_ENV} --contextroot alm-albink-jespers-philipn-stevieo-${DEPLOY_ENV} target/alm-albink-jespers-philipn-stevieo-1.0-SNAPSHOT.war'
             }
         } 
     }

@@ -14,12 +14,14 @@ public class PersonTest {
         assertTrue(expected.equalsIgnoreCase(p.getName()));
     }
     
+    @Test
     public void ageTest() {
         int expected = 58;
         
         assertTrue(expected == p.getAge());
     }
     
+    @Test
     public void genderTest() {
         String expected = "male";
         

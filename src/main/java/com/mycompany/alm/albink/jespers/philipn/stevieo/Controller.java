@@ -29,25 +29,6 @@ public class Controller implements Serializable {
     public Controller() {
     }
     
-    
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public Translator getTranslator() {
-        return translator;
-    }
-
-    public void setTranslator(Translator translator) {
-        this.translator = translator;
-    }
-    
-    
     public void createMessage(){
         person = new Person(this.nameone,this.age,this.gender);
         translator.fortune(person);

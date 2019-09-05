@@ -14,6 +14,9 @@ public class Translator implements Serializable{
                                             "lizard"};
 
     public void fortune(Person person){
+        
+        
+        
         int factor = RandomFactor.zeroToNine();
         StringBuilder result = new StringBuilder();
         
