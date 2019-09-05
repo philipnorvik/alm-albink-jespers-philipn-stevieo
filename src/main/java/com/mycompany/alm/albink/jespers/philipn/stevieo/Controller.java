@@ -31,7 +31,8 @@ public class Controller implements Serializable {
     
     public void createMessage(){
         person = new Person(this.nameone,this.age,this.gender);
-        translator.fortune(person);
+        int factor = RandomFactor.zeroToNine();
+        translator.fortune(person, factor);
         this.message = translator.getMessage();
     }
 

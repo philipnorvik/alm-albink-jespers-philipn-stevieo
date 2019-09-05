@@ -29,4 +29,18 @@ public class ControllerTest {
         //MESSAGE
         assertEquals(message, c.getMessage());
     }
+    
+    @Test
+    public void testCreateMessage() {
+    	c.setAge(p.getAge());
+        c.setGender(p.getGender());
+        c.setMessage(message);
+        c.setNameone(p.getName());
+        
+    	c.createMessage();
+    	assertTrue(c.getMessage() != null);
+    	assertTrue(c.getAge() == p.getAge());
+    	assertTrue(c.getGender() == p.getGender());
+    	assertTrue(c.getNameone().equals(p.getName()));
+    }
 }

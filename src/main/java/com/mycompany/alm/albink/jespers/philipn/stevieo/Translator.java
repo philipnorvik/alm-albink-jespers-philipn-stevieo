@@ -13,34 +13,35 @@ public class Translator implements Serializable{
                                             "Lamborghini", "10 bedroom house", "5 square meter apartment",
                                             "lizard"};
 
-    public void fortune(Person person){
+    public void fortune(Person person, int randomNumber){
         
-        
-        
-        int factor = RandomFactor.zeroToNine();
         StringBuilder result = new StringBuilder();
+        person.setAge(person.getAge() + randomNumber);
         
         result.append(person.getName())
             .append(", you will soon be ")
-            .append(alternatives1[factor])
+            .append(alternatives1[randomNumber])
             .append(". ")
             .append("At the age of ")
-            .append(person.getAge() + factor)
+            .append(person.getAge())
             .append(" you will get a ")
-            .append(alternatives2[factor])
+            .append(alternatives2[randomNumber])
             .append(". ")
             .append("\nYou will meet your dream ");
         
-        if(person.getGender().equalsIgnoreCase("male")){
-            result.append("girl");
-        }else if(person.getGender().equalsIgnoreCase("female")){
-            result.append("man");
-        }else{
-            result.append("partner");
-        }
-        
+        result.append(calcGender(person.getGender()));
         result.append(" in the near future!");
         message = result.toString();
+    }
+    
+    public String calcGender(String gender) {
+    	if(gender.equalsIgnoreCase("male")){
+            return "girl";
+        }else if(gender.equalsIgnoreCase("female")){
+            return "man";
+        }else{
+            return "partner";
+        }
     }
     
     public String getMessage() {
